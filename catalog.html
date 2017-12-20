@@ -63,11 +63,11 @@
 		  </fieldset>
 		  <fieldset class="filter-item">
 		    <legend class="filter__legend">Особенности:</legend>
-			<label class="checkbox__label"><input class="checkbox__input" type="chekbox" name="content" value="slider" checked>Слайдер</label>
-			<label class="checkbox__label"><input class="checkbox__input" type="chekbox" name="content" value="advantages">Преимущества</label>
-			<label class="checkbox__label"><input class="checkbox__input" type="chekbox" name="content" value="news" checked>Новости</label>
-			<label class="checkbox__label"><input class="checkbox__input" type="chekbox" name="content" value="gallery">Галерея</label>
-			<label class="checkbox__label"><input class="checkbox__input" type="chekbox" name="content" value="cart">Корзина</label>
+			<label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="slider" checked>Слайдер</label>
+			<label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="advantages">Преимущества</label>
+			<label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="news" checked>Новости</label>
+			<label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="gallery">Галерея</label>
+			<label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="cart">Корзина</label>
 		  </fieldset>
 		  <button class="button button--grey button--wide" type="submit">Показать</button>
 		</form>
@@ -141,9 +141,48 @@
 		</li>
 	  </ul>
 	  </section>
+	  <ul class="pagination">
+	    <li class="pagination__item">
+		  <a class="pagination__link pagination__link--current" href="#" >1</a>
+		</li>
+		<li class="pagination__item">
+		  <a class="pagination__link" href="#" >2</a>
+		</li>
+		<li class="pagination__item">
+		  <a class="pagination__link" href="#" >3</a>
+		</li>
+		<li class="pagination__item">
+		  <a class="pagination__link" href="#" >3</a>
+		</li>
+				<li class="pagination__item">
+		  <button type="button" class=" button button--grey pagination__button">Следующая</button>
+		</li>
+	  </ul>
 	</main>
-  
-  
-  
+	
+    <footer class="footer">
+	  <ul class="social-list">
+	    <li class="social-list__item">
+		  <a class="social-list__link" href="#" target="_blank">
+		    <img src="img/vk.svg" width="80" height="80" alt="Мы Вконтакте">
+		  </a>
+		</li>
+		<li class="social-list__item">
+		  <a class="social-list__link"  href="#" target="_blank">
+		    <img src="img/fb.svg" width="80" height="80" alt="Мы в Фейсбуке">
+		  </a>
+		</li>
+		<li class="social-list__item">
+		  <a class="social-list__link"  href="#" target="_blank">
+		    <img src="img/inst.svg" width="80" height="80" alt="Мы в Инстаграме">
+		  </a>
+		</li>
+	  </ul>
+	  <section class="footer-content">
+	    <h2 class="footer__title">Давайте дружить, это выгодно!</h2>
+		<p class="footer__text">Скидка 10% для друзей из социальных сетей.</p>
+	  </section>
+	</footer>
+	
   </body>
 </html>
