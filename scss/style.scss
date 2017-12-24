@@ -1,5 +1,15 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
 $red: red;
 
-.button{
-	color: $red;
+div{
+  background: $red;
+  @include border-radius(4px);
+  @include box-sizing(content-box);
 }
