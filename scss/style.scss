@@ -1,14 +1,33 @@
-@import "fonts";
+
 @import "compass/css3";
 
+@import "fonts";
+
+
 $font: 'Roboto', Arial, sans-serif;
+$light-grey: #eeeeee;
 
-@import 'header';
-
+body{
+	margin: 0;
+	padding: 0;
+}
 
 html{
 	font-family: $font;
+	line-height: 30px;
+	color: #000000;
+	
+	background-color: #ffffff;
+	background-image: linear-gradient(to bottom, $light-grey 0px, $light-grey 545px , #ffffff 545px)
 }
+
+
+@import 'container';
+@import 'header-nav';
+@import 'header-menu';
+
+
+
 
 
 
