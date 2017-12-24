@@ -16,13 +16,13 @@
   font-weight: 700;
   src: local("Roboto"), local("Roboto-Bold"), url(../fonts/robotobold.woff2) format("woff2");
 }
-/* line 10, ../scss/style.scss */
+/* line 12, ../scss/style.scss */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* line 15, ../scss/style.scss */
+/* line 17, ../scss/style.scss */
 html {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 30px;
@@ -68,15 +68,33 @@ html {
   margin-right: 45px;
 }
 /* line 11, ../scss/_header-menu.scss */
-.header-menu__item:last-child {
+.header-menu__item::last-child {
   margin-right: 0;
 }
 /* line 15, ../scss/_header-menu.scss */
 .header-menu__link {
+  padding: 10px 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+}
+/* line 25, ../scss/_header-menu.scss */
+.header-menu__link:hover, .header-menu__link:focus {
+  color: #fb565a;
+}
+/* line 30, ../scss/_header-menu.scss */
+.header-menu__link:active {
+  color: #d7d7d7;
+}
+/* line 34, ../scss/_header-menu.scss */
+.header-menu__link--current {
+  border-bottom: 2px solid #fb565a;
+}
+/* line 37, ../scss/_header-menu.scss */
+.header-menu__link--cart {
+  padding-left: 40px;
+  background: url(../img/icon-cart.svg) no-repeat 0 18px;
 }

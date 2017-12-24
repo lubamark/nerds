@@ -8,19 +8,35 @@
   &__item{
 	  margin-right: 45px;
   }
-  &__item:last-child{
+  &__item::last-child{
 	  margin-right: 0;
   }
   
   &__link{
+	  padding: 10px 0;
+	  
 	  font-size: 16px;
 	  font-weight: 500;
 	  line-height: 30px;
 	  text-transform: uppercase;
 	  text-decoration: none;
 	  color: #000;
-	  
-	  
+  }
+  &__link:hover,
+  &__link:focus{
+	  color: $light-pink;
+  }
+  
+  &__link:active{
+	  color: $grey;
   }
 
+  &__link--current{
+	  border-bottom: 2px solid $light-pink;
+  }
+  &__link--cart{
+	  padding-left: 40px;
+	  background: url(../img/icon-cart.svg) no-repeat 0 18px;
+  }
+  
 }
