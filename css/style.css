@@ -16,13 +16,13 @@
   font-weight: 700;
   src: local("Roboto"), local("Roboto-Bold"), url(../fonts/robotobold.woff2) format("woff2");
 }
-/* line 12, ../scss/style.scss */
+/* line 14, ../scss/style.scss */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* line 17, ../scss/style.scss */
+/* line 19, ../scss/style.scss */
 html {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 30px;
@@ -31,11 +31,29 @@ html {
   background-image: linear-gradient(to bottom, #eeeeee 0px, #eeeeee 545px, #ffffff 545px);
 }
 
+/* line 1, ../scss/_visually-hidden.scss */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* line 1, ../scss/_container.scss */
 .container {
+  position: relative;
   width: 1180px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+/* line 1, ../scss/_header.scss */
+.header {
+  margin-bottom: 20px;
 }
 
 /* line 1, ../scss/_header-nav.scss */
@@ -49,6 +67,12 @@ html {
   -webkit-align-items: center;
   align-items: center;
   margin-top: 50px;
+}
+
+/* line 1, ../scss/_header__logo.scss */
+.header-logo {
+  margin: 0;
+  padding: 0;
 }
 
 /* line 1, ../scss/_header-menu.scss */
@@ -73,7 +97,7 @@ html {
 }
 /* line 15, ../scss/_header-menu.scss */
 .header-menu__link {
-  padding: 10px 0;
+  padding: 0 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
@@ -96,5 +120,170 @@ html {
 /* line 37, ../scss/_header-menu.scss */
 .header-menu__link--cart {
   padding-left: 40px;
-  background: url(../img/icon-cart.svg) no-repeat 0 18px;
+  background: url(../img/icon-cart.svg) no-repeat 0 10px;
+}
+
+/* line 1, ../scss/_slider.scss */
+.slider {
+  min-height: 415px;
+}
+
+/* line 5, ../scss/_slider.scss */
+.slider-toggle {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-size: 0;
+}
+/* line 23, ../scss/_slider.scss */
+.slider-toggle__item {
+  display: block;
+  margin-right: 18px;
+  background-color: #ffffff;
+  width: 18px;
+  height: 18px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* line 35, ../scss/_slider.scss */
+.slider-toggle__item::last-child {
+  margin-right: 0;
+}
+
+/* line 40, ../scss/_slider.scss */
+.slides {
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* line 49, ../scss/_slider.scss */
+.slide {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  min-width: 100%;
+}
+/* line 52, ../scss/_slider.scss */
+.slide__title {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  max-width: 540px;
+}
+/* line 60, ../scss/_slider.scss */
+.slide__content {
+  margin: 0 0 40px 0;
+  padding: 0;
+  max-width: 410px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 22, ../scss/_button.scss */
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 0;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 37, ../scss/_button.scss */
+.button:active {
+  box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+/* line 42, ../scss/_button.scss */
+.button--red {
+  background-color: #fb565a;
+}
+/* line 12, ../scss/_button.scss */
+.button--red:hover, .button--red:focus {
+  background-color: #db363a;
+}
+/* line 16, ../scss/_button.scss */
+.button--red:active {
+  background-color: #cb262a;
+}
+/* line 46, ../scss/_button.scss */
+.button--green {
+  background-color: #00ca74;
+}
+/* line 12, ../scss/_button.scss */
+.button--green:hover, .button--green:focus {
+  background-color: #00aa54;
+}
+/* line 16, ../scss/_button.scss */
+.button--green:active {
+  background-color: #009a44;
+}
+/* line 50, ../scss/_button.scss */
+.button--yellow {
+  background-color: #efc84a;
+}
+/* line 12, ../scss/_button.scss */
+.button--yellow:hover, .button--yellow:focus {
+  background-color: #cfa82a;
+}
+/* line 16, ../scss/_button.scss */
+.button--yellow:active {
+  background-color: #bf981a;
+}
+/* line 54, ../scss/_button.scss */
+.button--grey {
+  background-color: #eeeeee;
+}
+/* line 12, ../scss/_button.scss */
+.button--grey:hover, .button--grey:focus {
+  background-color: #cecece;
+}
+/* line 16, ../scss/_button.scss */
+.button--grey:active {
+  background-color: #bebebe;
+}
+/* line 59, ../scss/_button.scss */
+.button--xs {
+  width: 160px;
+}
+/* line 59, ../scss/_button.scss */
+.button--s {
+  width: 200px;
+}
+/* line 59, ../scss/_button.scss */
+.button--m {
+  width: 220px;
+}
+/* line 59, ../scss/_button.scss */
+.button--l {
+  width: 240px;
+}
+/* line 59, ../scss/_button.scss */
+.button--xl {
+  width: 260px;
 }

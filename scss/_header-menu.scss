@@ -13,7 +13,7 @@
   }
   
   &__link{
-	  padding: 10px 0;
+	  padding: 0 0;
 	  
 	  font-size: 16px;
 	  font-weight: 500;
@@ -24,7 +24,7 @@
   }
   &__link:hover,
   &__link:focus{
-	  color: $light-pink;
+	  color: $red;
   }
   
   &__link:active{
@@ -32,11 +32,11 @@
   }
 
   &__link--current{
-	  border-bottom: 2px solid $light-pink;
+	  border-bottom: 2px solid $red;
   }
   &__link--cart{
 	  padding-left: 40px;
-	  background: url(../img/icon-cart.svg) no-repeat 0 18px;
+	  background: url(../img/icon-cart.svg) no-repeat 0 10px;
   }
   
 }

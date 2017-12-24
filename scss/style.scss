@@ -7,7 +7,9 @@
 $font: 'Roboto', Arial, sans-serif;
 $light-grey: #eeeeee;
 $grey: #d7d7d7;
-$light-pink: #fb565a;
+$red: #fb565a;
+$green: #00ca74;
+$yellow: #efc84a;
 
 body{
 	margin: 0;
@@ -23,10 +25,14 @@ html{
 	background-image: linear-gradient(to bottom, $light-grey 0px, $light-grey 545px , #ffffff 545px)
 }
 
-
-@import 'container';
-@import 'header-nav';
-@import 'header-menu';
+@import "visually-hidden";
+@import "container";
+@import "header";
+@import "header-nav";
+@import "header__logo";
+@import "header-menu";
+@import "slider";
+@import "button";
 
 
 
