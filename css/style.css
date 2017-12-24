@@ -140,6 +140,7 @@ html {
   flex-direction: row;
   -webkit-justify-content: center;
   justify-content: center;
+  max-width: 300px;
   list-style: none;
   margin: 0;
   margin-left: auto;
@@ -147,7 +148,7 @@ html {
   padding: 0;
   font-size: 0;
 }
-/* line 23, ../scss/_slider.scss */
+/* line 24, ../scss/_slider.scss */
 .slider-toggle__item {
   display: block;
   margin-right: 18px;
@@ -159,12 +160,12 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
-/* line 35, ../scss/_slider.scss */
+/* line 36, ../scss/_slider.scss */
 .slider-toggle__item::last-child {
   margin-right: 0;
 }
 
-/* line 40, ../scss/_slider.scss */
+/* line 41, ../scss/_slider.scss */
 .slides {
   display: -webkit-flex;
   display: flex;
@@ -174,13 +175,13 @@ html {
   overflow: hidden;
 }
 
-/* line 49, ../scss/_slider.scss */
+/* line 50, ../scss/_slider.scss */
 .slide {
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
   min-width: 100%;
 }
-/* line 52, ../scss/_slider.scss */
+/* line 53, ../scss/_slider.scss */
 .slide__title {
   margin: 0 0 30px 0;
   padding: 0;
@@ -189,7 +190,7 @@ html {
   font-weight: 500;
   max-width: 540px;
 }
-/* line 60, ../scss/_slider.scss */
+/* line 61, ../scss/_slider.scss */
 .slide__content {
   margin: 0 0 40px 0;
   padding: 0;
@@ -202,7 +203,7 @@ html {
 .button {
   display: inline-block;
   vertical-align: middle;
-  padding: 15px 0;
+  padding: 10px 0;
   font-family: inherit;
   font-size: 16px;
   text-transform: uppercase;
