@@ -14,6 +14,7 @@ $yellow: #efc84a;
 body{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html{
@@ -23,6 +24,10 @@ html{
 	
 	background-color: #ffffff;
 	background-image: linear-gradient(to bottom, $light-grey 0px, $light-grey 545px , #ffffff 545px)
+}
+
+*, ::before, ::after{
+	box-sizing: inherit;
 }
 
 @import "visually-hidden";
