@@ -1,0 +1,8 @@
+.about-us{
+	@include display-flex;
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	
+	border-top: 2px solid $light-grey;
+	padding: 40px 0 70px 0;
+}
