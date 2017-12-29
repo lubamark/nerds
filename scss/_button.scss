@@ -11,10 +11,10 @@ $button-sizes: (
 	
 	&:hover,
 	&:focus{
-		background-color: $color - #202020;
+		background-color: $color - 20;
 	}
 	&:active{
-		background-color: $color - #303030;
+		background-color: $color - 30;
 	}
 }
 

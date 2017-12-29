@@ -291,11 +291,11 @@ html {
 }
 /* line 12, ../scss/_button.scss */
 .button--red:hover, .button--red:focus {
-  background-color: #db363a;
+  background-color: #e74246;
 }
 /* line 16, ../scss/_button.scss */
 .button--red:active {
-  background-color: #cb262a;
+  background-color: #dd383c;
 }
 /* line 46, ../scss/_button.scss */
 .button--green {
@@ -303,11 +303,11 @@ html {
 }
 /* line 12, ../scss/_button.scss */
 .button--green:hover, .button--green:focus {
-  background-color: #00aa54;
+  background-color: #00b660;
 }
 /* line 16, ../scss/_button.scss */
 .button--green:active {
-  background-color: #009a44;
+  background-color: #00ac56;
 }
 /* line 50, ../scss/_button.scss */
 .button--yellow {
@@ -315,11 +315,11 @@ html {
 }
 /* line 12, ../scss/_button.scss */
 .button--yellow:hover, .button--yellow:focus {
-  background-color: #cfa82a;
+  background-color: #dbb436;
 }
 /* line 16, ../scss/_button.scss */
 .button--yellow:active {
-  background-color: #bf981a;
+  background-color: #d1aa2c;
 }
 /* line 54, ../scss/_button.scss */
 .button--grey {
@@ -327,11 +327,11 @@ html {
 }
 /* line 12, ../scss/_button.scss */
 .button--grey:hover, .button--grey:focus {
-  background-color: #cecece;
+  background-color: #dadada;
 }
 /* line 16, ../scss/_button.scss */
 .button--grey:active {
-  background-color: #bebebe;
+  background-color: #d0d0d0;
 }
 /* line 59, ../scss/_button.scss */
 .button--xs {
@@ -431,8 +431,9 @@ html {
 .studio {
   -webkit-flex-basis: 660px;
   flex-basis: 660px;
+  margin-right: auto;
 }
-/* line 4, ../scss/_studio.scss */
+/* line 5, ../scss/_studio.scss */
 .studio__title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -440,7 +441,12 @@ html {
   line-height: 45px;
   font-weight: 500;
 }
-/* line 12, ../scss/_studio.scss */
+/* line 13, ../scss/_studio.scss */
+.studio__title sup {
+  position: relative;
+  top: 8px;
+}
+/* line 18, ../scss/_studio.scss */
 .studio__title--small {
   margin: 0 0 20px 0;
   padding: 0;
@@ -449,7 +455,11 @@ html {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 23, ../scss/_studio.scss */
+/* line 28, ../scss/_studio.scss */
+.studio__title--bold {
+  font-weight: 900;
+}
+/* line 33, ../scss/_studio.scss */
 .studio__content {
   margin: 0 0 30px 0;
   paddong: 0;
@@ -457,7 +467,15 @@ html {
   line-height: 24px;
   font-weight: 400;
 }
-/* line 33, ../scss/_studio.scss */
+/* line 43, ../scss/_studio.scss */
+.studio__caption {
+  margin: 0 0 30px 0;
+  paddong: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+/* line 52, ../scss/_studio.scss */
 .studio__list {
   margin: 0;
   padding: 0;
@@ -466,12 +484,12 @@ html {
   line-height: 48px;
   font-weight: 400;
 }
-/* line 43, ../scss/_studio.scss */
+/* line 62, ../scss/_studio.scss */
 .studio__item {
   position: relative;
   padding-left: 35px;
 }
-/* line 50, ../scss/_studio.scss */
+/* line 69, ../scss/_studio.scss */
 .studio__item::before {
   content: "";
   position: absolute;
@@ -480,4 +498,27 @@ html {
   width: 25px;
   height: 2px;
   background-color: #fb565a;
+}
+
+/* line 1, ../scss/_studio-facts.scss */
+.studio-facts {
+  -webkit-flex-basis: 380px;
+  flex-basis: 380px;
+}
+
+/* line 6, ../scss/_studio-facts.scss */
+.studio-facts-list {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 15, ../scss/_studio-facts.scss */
+.studio-facts-list__item {
+  margin-right: 10px;
+}
+/* line 19, ../scss/_studio-facts.scss */
+.studio-facts-list__item:last-child {
+  margin-right: 0;
 }

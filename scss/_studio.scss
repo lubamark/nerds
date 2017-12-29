@@ -1,5 +1,6 @@
 .studio{
 	@include flex-basis(660px);
+	margin-right: auto;
 	
 	&__title{
 		margin: 0 0 20px 0;
@@ -9,14 +10,23 @@
 		line-height: 45px;
 		font-weight: 500;
 		
+		sup{
+			position: relative;
+			top: 8px;
+		}
+		
 		&--small{
 			margin: 0 0 20px 0;
 			padding: 0;
 			
 			font-size: 16px;
-			line-height: 24px;
+		    line-height: 24px;
 			font-weight: 700;
 			text-transform: uppercase;
+		}
+		
+		&--bold{
+			font-weight: 900;
 		}
 	}
 	
@@ -28,6 +38,15 @@
 		line-height: 24px;
 		font-weight: 400;
 		
+	}
+	
+	&__caption{
+		margin: 0 0 30px 0;
+		paddong: 0;
+		
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
 	}
 	
 	&__list{
