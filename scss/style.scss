@@ -7,9 +7,9 @@ $font: 'Roboto', Arial, sans-serif;
 
 $light-grey: #eeeeee;
 $grey: #d7d7d7;
-$red: #fb565a;
-$green: #00ca74;
-$yellow: #efc84a;
+$red: rgb(251, 86, 90);
+$green: rgb(0, 202, 116);
+$yellow: rgb(239, 200, 74);
 
 body{
 	margin: 0;
@@ -19,7 +19,7 @@ body{
 
 html{
 	font-family: $font;
-	line-height: 30px;
+	font-size: 16px;
 	color: #000000;
 	
 	background-color: #ffffff;
