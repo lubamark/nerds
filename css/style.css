@@ -53,8 +53,14 @@ html {
 .container {
   position: relative;
   box-sizing: border-box;
-  width: 1180px;
+  width: 1200px;
   padding: 0 20px;
+  margin: 0 auto;
+}
+/* line 10, ../scss/_container.scss */
+.container--map {
+  width: 1200px;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -549,4 +555,23 @@ html {
 .projects-list__link:active {
   -webkit-filter: opacity(0.1);
   filter: opacity(0.1);
+}
+
+/* line 1, ../scss/_contacts-block.scss */
+.contacts-block {
+  position: relative;
+  overflow: hidden;
+  min-height: 415px;
+}
+
+/* line 8, ../scss/_contacts-block.scss */
+.contacts {
+  float: left;
+  background: #ffffff;
+}
+
+/* line 14, ../scss/_contacts-block.scss */
+.ya-map {
+  position: absolute;
+  width: 100%;
 }
