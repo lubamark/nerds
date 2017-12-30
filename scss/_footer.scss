@@ -1,5 +1,26 @@
-.footer{
+.footer-menu{
 	@include display-flex;
 	@include flex-direction(row);
 	@include flex-wrap(wrap);
+	@include align-items(center);
+}
+
+.footer{
+	&__title{
+		margin: 0 0 10px 0;
+		padding:0;
+		
+		font-size: 35px;
+		line-height: 35px;
+		font-weight: 700;
+	}
+	
+	&__text{
+		margin: 0;
+		padding:0;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+		color: #444444;
+	}
 }

@@ -1,9 +1,7 @@
 .contacts-block{
 	position: relative;
 	
-	@include flex-basis(100%);
-	@include flex-shrink(0);
-	overflow: hidden;
+	margin-bottom: 70px;
 	min-height: 415px;
 	
 }
