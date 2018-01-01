@@ -1,4 +1,14 @@
 .header-logo{
 	margin: 0;
 	padding: 0;
+	
+	&__link:hover,
+	&__link:focus{
+		@include filter(opacity(0.8));
+	}
+	
+	&__link:active{
+		@include filter(opacity(0.3));
+	}
+	
 }
