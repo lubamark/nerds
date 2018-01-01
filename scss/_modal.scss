@@ -15,7 +15,7 @@
 	
 	@include display-flex;
 	@include flex-wrap(wrap);
-	@include justify-content(flex-start)
+	@include justify-content(flex-start);
 	width: 80%;
 	height: 590px;
 

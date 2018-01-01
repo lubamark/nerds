@@ -1,74 +1,734 @@
-/*
-Error: Invalid CSS after "...ent(flex-start)": expected "}", was "width: 80%;"
-        on line 19 of C:/Users/Luba/Documents/GitHub/nerds/scss/_modal.scss
-        from line 49 of C:/Users/Luba/Documents/GitHub/nerds/scss/style.scss
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(../fonts/roboto.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"), local("Roboto-Medium"), url(../fonts/robotomedium.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"), local("Roboto-Bold"), url(../fonts/robotobold.woff2) format("woff2");
+}
+/* line 14, ../scss/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-14: 	
-15: 	
-16: 	@include display-flex;
-17: 	@include flex-wrap(wrap);
-18: 	@include justify-content(flex-start)
-19: 	width: 80%;
-20: 	height: 590px;
-21: 
-22: 	margin: auto;
-23: 	
-24: 	.feedback{
+/* line 20, ../scss/style.scss */
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, #eeeeee 0px, #eeeeee 545px, #ffffff 545px);
+}
 
-Backtrace:
-C:/Users/Luba/Documents/GitHub/nerds/scss/_modal.scss:19
-C:/Users/Luba/Documents/GitHub/nerds/scss/style.scss:49
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:667:in `block'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby24/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ent(flex-start)\": expected \"}\", was \"width: 80%;\"\A         on line 19 of C:/Users/Luba/Documents/GitHub/nerds/scss/_modal.scss\A         from line 49 of C:/Users/Luba/Documents/GitHub/nerds/scss/style.scss\A \A 14: 	\A 15: 	\A 16: 	@include display-flex;\A 17: 	@include flex-wrap(wrap);\A 18: 	@include justify-content(flex-start)\A 19: 	width: 80%;\A 20: 	height: 590px;\A 21: \A 22: 	margin: auto;\A 23: 	\A 24: 	.feedback{"; }
+/* line 29, ../scss/style.scss */
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+/* line 1, ../scss/_visually-hidden.scss */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* line 1, ../scss/_container.scss */
+.container {
+  position: relative;
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+/* line 10, ../scss/_container.scss */
+.container--map {
+  width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* line 1, ../scss/_header.scss */
+.header {
+  margin-bottom: 20px;
+}
+
+/* line 1, ../scss/_header-nav.scss */
+.header-nav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* line 1, ../scss/_header__logo.scss */
+.header-logo {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../scss/_header-menu.scss */
+.header-menu {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 8, ../scss/_header-menu.scss */
+.header-menu__item {
+  margin-right: 45px;
+}
+/* line 11, ../scss/_header-menu.scss */
+.header-menu__item::last-child {
+  margin-right: 0;
+}
+/* line 15, ../scss/_header-menu.scss */
+.header-menu__link {
+  padding: 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+/* line 25, ../scss/_header-menu.scss */
+.header-menu__link:hover, .header-menu__link:focus {
+  color: #fb565a;
+}
+/* line 30, ../scss/_header-menu.scss */
+.header-menu__link:active {
+  color: #d7d7d7;
+}
+/* line 34, ../scss/_header-menu.scss */
+.header-menu__link--current {
+  border-bottom: 2px solid #fb565a;
+}
+/* line 37, ../scss/_header-menu.scss */
+.header-menu__link--cart {
+  padding-left: 40px;
+  background: url(../img/icon-cart.svg) no-repeat 0 10px;
+}
+
+/* line 1, ../scss/_slider.scss */
+.slider {
+  min-height: 415px;
+  background-color: #eeeeee;
+  margin-bottom: 85px;
+}
+
+/* line 7, ../scss/_slider.scss */
+.input-slider {
+  display: none;
+}
+
+/* line 11, ../scss/_slider.scss */
+.slider-toggle {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 300px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+}
+/* line 28, ../scss/_slider.scss */
+.slider-toggle__label {
+  display: block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* line 40, ../scss/_slider.scss */
+.slider-toggle__item {
+  position: relative;
+  margin-right: 18px;
+}
+/* line 45, ../scss/_slider.scss */
+.slider-toggle__item:last-child {
+  margin-right: 0;
+}
+
+/* line 50, ../scss/_slider.scss */
+.slides {
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 58, ../scss/_slider.scss */
+.slide {
+  display: none;
+  min-width: 100%;
+  min-height: 415px;
+  padding: 50px 0;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+/* line 69, ../scss/_slider.scss */
+.slide--1 {
+  background-image: url(../img/slide-1.png);
+}
+/* line 73, ../scss/_slider.scss */
+.slide--2 {
+  background-image: url(../img/slide-2.png);
+}
+/* line 77, ../scss/_slider.scss */
+.slide--3 {
+  background-image: url(../img/slide-3.png);
+}
+/* line 81, ../scss/_slider.scss */
+.slide__title {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  max-width: 540px;
+}
+/* line 90, ../scss/_slider.scss */
+.slide__content {
+  margin: 0 0 40px 0;
+  padding: 0;
+  max-width: 410px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 100, ../scss/_slider.scss */
+#slide-1:checked ~ .slides .slide--1 {
+  display: block;
+}
+
+/* line 104, ../scss/_slider.scss */
+#slide-2:checked ~ .slides .slide--2 {
+  display: block;
+}
+
+/* line 108, ../scss/_slider.scss */
+#slide-3:checked ~ .slides .slide--3 {
+  display: block;
+}
+
+/* line 112, ../scss/_slider.scss */
+#slide-1:checked ~ .slider-toggle .slider-toggle__label--1::before,
+#slide-2:checked ~ .slider-toggle .slider-toggle__label--2::before,
+#slide-3:checked ~ .slider-toggle .slider-toggle__label--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 22, ../scss/_button.scss */
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 37, ../scss/_button.scss */
+.button:active {
+  -moz-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+/* line 42, ../scss/_button.scss */
+.button--red {
+  background-color: #fb565a;
+}
+/* line 12, ../scss/_button.scss */
+.button--red:hover, .button--red:focus {
+  background-color: #e74246;
+}
+/* line 16, ../scss/_button.scss */
+.button--red:active {
+  background-color: #dd383c;
+}
+/* line 46, ../scss/_button.scss */
+.button--green {
+  background-color: #00ca74;
+}
+/* line 12, ../scss/_button.scss */
+.button--green:hover, .button--green:focus {
+  background-color: #00b660;
+}
+/* line 16, ../scss/_button.scss */
+.button--green:active {
+  background-color: #00ac56;
+}
+/* line 50, ../scss/_button.scss */
+.button--yellow {
+  background-color: #efc84a;
+}
+/* line 12, ../scss/_button.scss */
+.button--yellow:hover, .button--yellow:focus {
+  background-color: #dbb436;
+}
+/* line 16, ../scss/_button.scss */
+.button--yellow:active {
+  background-color: #d1aa2c;
+}
+/* line 54, ../scss/_button.scss */
+.button--grey {
+  background-color: #eeeeee;
+}
+/* line 12, ../scss/_button.scss */
+.button--grey:hover, .button--grey:focus {
+  background-color: #dadada;
+}
+/* line 16, ../scss/_button.scss */
+.button--grey:active {
+  background-color: #d0d0d0;
+}
+/* line 59, ../scss/_button.scss */
+.button--xs {
+  width: 160px;
+}
+/* line 59, ../scss/_button.scss */
+.button--s {
+  width: 200px;
+}
+/* line 59, ../scss/_button.scss */
+.button--m {
+  width: 220px;
+}
+/* line 59, ../scss/_button.scss */
+.button--l {
+  width: 240px;
+}
+/* line 59, ../scss/_button.scss */
+.button--xl {
+  width: 260px;
+}
+
+/* line 1, ../scss/_service.scss */
+.service {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+/* line 5, ../scss/_service.scss */
+.service-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 18, ../scss/_service.scss */
+.service__item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-basis: 300px;
+  flex-basis: 300px;
+  margin-right: 100px;
+}
+/* line 27, ../scss/_service.scss */
+.service__item:last-child {
+  margin-right: 0;
+}
+/* line 31, ../scss/_service.scss */
+.service__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+/* line 38, ../scss/_service.scss */
+.service__title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 48, ../scss/_service.scss */
+.service__content {
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* line 1, ../scss/_about-us.scss */
+.about-us {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-top: 2px solid #eeeeee;
+  padding: 40px 0 70px 0;
+}
+
+/* line 1, ../scss/_studio.scss */
+.studio {
+  -webkit-flex-basis: 660px;
+  flex-basis: 660px;
+  margin-right: auto;
+}
+/* line 5, ../scss/_studio.scss */
+.studio__title {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+/* line 13, ../scss/_studio.scss */
+.studio__title sup {
+  position: relative;
+  top: 8px;
+}
+/* line 18, ../scss/_studio.scss */
+.studio__title--small {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 28, ../scss/_studio.scss */
+.studio__title--bold {
+  font-weight: 900;
+}
+/* line 33, ../scss/_studio.scss */
+.studio__content {
+  margin: 0 0 30px 0;
+  paddong: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+/* line 43, ../scss/_studio.scss */
+.studio__caption {
+  margin: 0 0 30px 0;
+  paddong: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+/* line 52, ../scss/_studio.scss */
+.studio__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 48px;
+  font-weight: 400;
+}
+/* line 62, ../scss/_studio.scss */
+.studio__item {
+  position: relative;
+  padding-left: 35px;
+}
+/* line 69, ../scss/_studio.scss */
+.studio__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
+/* line 83, ../scss/_studio.scss */
+.studio-facts {
+  -webkit-flex-basis: 380px;
+  flex-basis: 380px;
+}
+
+/* line 88, ../scss/_studio.scss */
+.studio-facts-list {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 97, ../scss/_studio.scss */
+.studio-facts-list__item {
+  margin-right: 10px;
+}
+/* line 101, ../scss/_studio.scss */
+.studio-facts-list__item:last-child {
+  margin-right: 0;
+}
+
+/* line 1, ../scss/_projects.scss */
+.projects-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 0 0 80px 0;
+  padding: 30px 0;
+  list-style: none;
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+}
+/* line 12, ../scss/_projects.scss */
+.projects-list__link {
+  -webkit-filter: opacity(0.2);
+  filter: opacity(0.2);
+}
+/* line 16, ../scss/_projects.scss */
+.projects-list__link:hover, .projects-list__link:focus {
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
+}
+/* line 21, ../scss/_projects.scss */
+.projects-list__link:active {
+  -webkit-filter: opacity(0.1);
+  filter: opacity(0.1);
+}
+
+/* line 1, ../scss/_footer.scss */
+.footer-menu {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 9, ../scss/_footer.scss */
+.footer__title {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 700;
+}
+/* line 18, ../scss/_footer.scss */
+.footer__text {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #444444;
+}
+
+/* line 1, ../scss/_contacts-block.scss */
+.contacts-block {
+  position: relative;
+  margin-bottom: 70px;
+  min-height: 415px;
+}
+
+/* line 9, ../scss/_contacts-block.scss */
+.contacts {
+  float: left;
+  width: 320px;
+  padding: 45px 50px;
+  margin: 55px 0;
+  background: #ffffff;
+}
+/* line 17, ../scss/_contacts-block.scss */
+.contacts__title {
+  padding: 0;
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 28, ../scss/_contacts-block.scss */
+.contacts__caption {
+  padding: 0;
+  margin: 0 0 20px 0;
+  width: 210px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+/* line 39, ../scss/_contacts-block.scss */
+.contacts__caption:last-child {
+  margin-bottom: 40px;
+}
+/* line 43, ../scss/_contacts-block.scss */
+.contacts__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 49, ../scss/_contacts-block.scss */
+.ya-map {
+  position: absolute;
+  width: 100%;
+}
+
+/* line 1, ../scss/_social-list.scss */
+.social-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-basis: 260px;
+  flex-basis: 260px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin: 0 140px 0 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 10, ../scss/_social-list.scss */
+.social-list__item {
+  margin-right: 12px;
+}
+/* line 14, ../scss/_social-list.scss */
+.social-list__item:last-child {
+  margin-right: 0;
+}
+/* line 18, ../scss/_social-list.scss */
+.social-list__link {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #e1e1e1;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 28, ../scss/_social-list.scss */
+.social-list__link:hover, .social-list__link:focus {
+  background-color: #e74246;
+}
+/* line 33, ../scss/_social-list.scss */
+.social-list__link:active {
+  background-color: #dd383c;
+  -moz-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+/* line 37, ../scss/_social-list.scss */
+.social-list__link:active img {
+  -webkit-filter: opacity(0.3);
+  filter: opacity(0.3);
+}
+/* line 43, ../scss/_social-list.scss */
+.social-list__link img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 1, ../scss/_modal.scss */
+.modal {
+  background-color: #ffffff;
+  -moz-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  padding: 65px 100px;
+}
+
+/* line 8, ../scss/_modal.scss */
+.modal-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 80%;
+  height: 590px;
+  margin: auto;
+}
+/* line 25, ../scss/_modal.scss */
+.modal-feedback .feedback__title {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
