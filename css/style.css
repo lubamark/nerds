@@ -270,7 +270,7 @@ html {
   border-radius: 50%;
 }
 
-/* line 22, ../scss/_button.scss */
+/* line 24, ../scss/_button.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -282,82 +282,91 @@ html {
   text-align: center;
   color: #fff;
   border: none;
+  cursor: pointer;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 37, ../scss/_button.scss */
+/* line 40, ../scss/_button.scss */
 .button:active {
   -moz-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.3);
 }
-/* line 42, ../scss/_button.scss */
+/* line 45, ../scss/_button.scss */
 .button--red {
   background-color: #fb565a;
 }
 /* line 12, ../scss/_button.scss */
 .button--red:hover, .button--red:focus {
   background-color: #e74246;
+  outline: none;
 }
-/* line 16, ../scss/_button.scss */
+/* line 17, ../scss/_button.scss */
 .button--red:active {
   background-color: #dd383c;
+  outline: none;
 }
-/* line 46, ../scss/_button.scss */
+/* line 49, ../scss/_button.scss */
 .button--green {
   background-color: #00ca74;
 }
 /* line 12, ../scss/_button.scss */
 .button--green:hover, .button--green:focus {
   background-color: #00b660;
+  outline: none;
 }
-/* line 16, ../scss/_button.scss */
+/* line 17, ../scss/_button.scss */
 .button--green:active {
   background-color: #00ac56;
+  outline: none;
 }
-/* line 50, ../scss/_button.scss */
+/* line 53, ../scss/_button.scss */
 .button--yellow {
   background-color: #efc84a;
 }
 /* line 12, ../scss/_button.scss */
 .button--yellow:hover, .button--yellow:focus {
   background-color: #dbb436;
+  outline: none;
 }
-/* line 16, ../scss/_button.scss */
+/* line 17, ../scss/_button.scss */
 .button--yellow:active {
   background-color: #d1aa2c;
+  outline: none;
 }
-/* line 54, ../scss/_button.scss */
+/* line 57, ../scss/_button.scss */
 .button--grey {
   background-color: #eeeeee;
 }
 /* line 12, ../scss/_button.scss */
 .button--grey:hover, .button--grey:focus {
   background-color: #dadada;
+  outline: none;
 }
-/* line 16, ../scss/_button.scss */
+/* line 17, ../scss/_button.scss */
 .button--grey:active {
   background-color: #d0d0d0;
+  outline: none;
 }
-/* line 59, ../scss/_button.scss */
+/* line 62, ../scss/_button.scss */
 .button--xs {
   width: 160px;
 }
-/* line 59, ../scss/_button.scss */
+/* line 62, ../scss/_button.scss */
 .button--s {
   width: 200px;
 }
-/* line 59, ../scss/_button.scss */
+/* line 62, ../scss/_button.scss */
 .button--m {
   width: 220px;
 }
-/* line 59, ../scss/_button.scss */
+/* line 62, ../scss/_button.scss */
 .button--l {
   width: 240px;
 }
-/* line 59, ../scss/_button.scss */
+/* line 62, ../scss/_button.scss */
 .button--xl {
   width: 260px;
 }
@@ -698,37 +707,148 @@ html {
 
 /* line 1, ../scss/_modal.scss */
 .modal {
+  position: relative;
+  z-index: 200;
+  display: none;
+  padding: 65px 100px;
   background-color: #ffffff;
   -moz-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-  z-index: 200;
-  padding: 65px 100px;
+}
+/* line 11, ../scss/_modal.scss */
+.modal-show {
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 16, ../scss/_modal.scss */
+.modal__close {
+  position: absolute;
+  z0index: 200;
+  top: 80px;
+  right: 90px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* line 30, ../scss/_modal.scss */
+.modal__close::before, .modal__close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 20px;
+  background-color: #fdbabb;
+}
+/* line 43, ../scss/_modal.scss */
+.modal__close::before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 47, ../scss/_modal.scss */
+.modal__close::after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 51, ../scss/_modal.scss */
+.modal__close:hover::before, .modal__close:hover::after, .modal__close:focus::before, .modal__close:focus::after {
+  background-color: #fb565a;
+}
+/* line 58, ../scss/_modal.scss */
+.modal__close:active::before, .modal__close:active::after {
+  background-color: #fec9ca;
 }
 
-/* line 8, ../scss/_modal.scss */
+/* line 65, ../scss/_modal.scss */
 .modal-feedback {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  display: -webkit-flex;
-  display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   width: 80%;
+  max-width: 960px;
+  min-width: 600px;
   height: 590px;
   margin: auto;
 }
-/* line 25, ../scss/_modal.scss */
-.modal-feedback .feedback__title {
+
+/* line 84, ../scss/_modal.scss */
+.feedback__title {
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  margin: 0;
+  margin: 0 0 30px 0;
   padding: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+/* line 95, ../scss/_modal.scss */
+.feedback-form {
+  height: 350px;
+  width: 100%;
+}
+/* line 100, ../scss/_modal.scss */
+.feedback-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 0 35px 0;
+  padding: 0;
+}
+/* line 107, ../scss/_modal.scss */
+.feedback__label {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+/* line 114, ../scss/_modal.scss */
+.feedback__label--half {
+  -webkit-flex-basis: 360px;
+  flex-basis: 360px;
+  margin-right: 40px;
+}
+/* line 119, ../scss/_modal.scss */
+.feedback__label--half:last-child {
+  margin-right: 0;
+}
+/* line 124, ../scss/_modal.scss */
+.feedback__input {
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  border: 2px solid #d7d7d7;
+  outline: none;
+}
+/* line 137, ../scss/_modal.scss */
+.feedback__input:hover {
+  border-color: #bebebe;
+}
+/* line 141, ../scss/_modal.scss */
+.feedback__input:focus {
+  border-color: #000;
+}
+/* line 146, ../scss/_modal.scss */
+.feedback__input:invalid {
+  border-color: #fb565a;
 }

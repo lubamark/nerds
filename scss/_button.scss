@@ -12,9 +12,11 @@ $button-sizes: (
 	&:hover,
 	&:focus{
 		background-color: $color - 20;
+		outline: none;
 	}
 	&:active{
 		background-color: $color - 30;
+		outline: none;
 	}
 }
 
@@ -32,6 +34,7 @@ $button-sizes: (
 	color: #fff;
 	
 	border: none;
+	cursor: pointer;
 	@include border-radius(4px);
 	
 	&:active{
@@ -60,7 +63,6 @@ $button-sizes: (
 			width: #{$value};
 		}
 	}
-	
 	
 }
 
