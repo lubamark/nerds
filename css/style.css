@@ -753,8 +753,17 @@ html {
   margin-bottom: 50px;
   border: none;
 }
+/* line 12, ../scss/_filter.scss */
+.filter__legend {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-/* line 14, ../scss/_filter.scss */
+/* line 23, ../scss/_filter.scss */
 .filter-catalog {
   -webkit-flex-basis: 760px;
   flex-basis: 760px;
