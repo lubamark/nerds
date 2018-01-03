@@ -731,6 +731,35 @@ html {
   background-color: #eeeeee;
 }
 
+/* line 15, ../scss/_inner-page.scss */
+.inner-page-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+/* line 1, ../scss/_filter.scss */
+.filter {
+  -webkit-flex-basis: 260px;
+  flex-basis: 260px;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  margin-right: 140px;
+}
+/* line 6, ../scss/_filter.scss */
+.filter-field {
+  margin-bottom: 50px;
+  border: none;
+}
+
+/* line 14, ../scss/_filter.scss */
+.filter-catalog {
+  -webkit-flex-basis: 760px;
+  flex-basis: 760px;
+}
+
 /* line 1, ../scss/_modal.scss */
 .modal {
   position: relative;

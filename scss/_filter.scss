@@ -1,0 +1,16 @@
+.filter{
+	@include flex-basis(260px);
+	@include flex-grow(0);
+	margin-right: 140px;
+	
+	&-field{
+		margin-bottom: 50px;
+	
+		border: none;
+
+	}
+}
+
+.filter-catalog{
+	@include flex-basis(760px);
+}

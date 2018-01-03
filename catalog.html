@@ -37,126 +37,130 @@
 	<main class="inner-page">
 	  <h1 class="inner-page__title">Магазин готовых шаблонов</h1>
 	  <div class="container">
-	    <section class="filter-search">
-	      <h2 class="visually-hidden">Фильтр поиска шаблонов</h2>
-		  <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-		    <fieldset class="filter-item">
-			  <legend class="filter__legend">Стоимость:</legend>
-			  <div class="range-filter">
-			    <div class="range-controls">
-				  <div class="range__scale">
-				    <div class="range__bar"></div>
-				  </div>
-				  <div class="range__toggle range__toggle-min"></div>
-				  <div class="range__toggle range__toggle-max"></div>
+	    <div class="inner-page-content">
+	      <section class="filter">
+	        <h2 class="visually-hidden">Фильтр поиска шаблонов</h2>
+		    <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+		      <fieldset class="filter-field">
+			    <legend class="filter__legend">Стоимость:</legend>
+			    <div class="filter__range">
+			      <div class="range__controls">
+				    <div class="range__scale">
+				      <div class="range__bar"></div>
+				    </div>
+				    <div class="range__toggle range__toggle--min"></div>
+				    <div class="range__toggle range__toggle--max"></div>
+			      </div>
+			      <div class="price-controls">
+				    <label class="price__label">от
+				    <input class="price__input price__input--min" name="min-price" type="text" value="0"></label>
+				    <label class="price__label">до
+				    <input class="price__input price__input--max" name="max-price" type="text" value="15000"></label>
+			      </div>
 			    </div>
-			    <div class="price-controls">
-				  <label class="price__label price__label--min">от <input class="price_input price_input__min" name="min-price" type="text" value="0"></label>
-				  <label class="price__label price__label--max">до <input class="price_input price_input--max" name="max-price" type="text" value="15000"></label>
-			    </div>
-			  </div>
-		    </fieldset>
-		    <fieldset class="filter-item">
-		      <legend class="filter__legend">Сетка:</legend>
-			  <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="adaptive">Адаптивная</label>
-			  <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="fixed">Фиксированная</label>
-			  <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="flexible">Резиновая</label>
-		    </fieldset>
-		    <fieldset class="filter-item">
-		      <legend class="filter__legend">Особенности:</legend>
-			  <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="slider" checked>Слайдер</label>
-			  <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="advantages">Преимущества</label>
-			  <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="news" checked>Новости</label>
-			  <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="gallery">Галерея</label>
-			  <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="cart">Корзина</label>
-		    </fieldset>
-		    <button class="button button--grey button--xl" type="submit">Показать</button>
-		  </form>
-	    </section>
+		      </fieldset>
+		      <fieldset class="filter-field">
+		        <legend class="filter__legend">Сетка:</legend>
+			   <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="adaptive">Адаптивная</label>
+			    <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="fixed">Фиксированная</label>
+			    <label class="radio__label"><input class="radio__input" type="radio" name="layout" value="flexible">Резиновая</label>
+		      </fieldset>
+		      <fieldset class="filter-field">
+		        <legend class="filter__legend">Особенности:</legend>
+			    <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="slider" checked>Слайдер</label>
+			    <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="advantages">Преимущества</label>
+			    <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="news" checked>Новости</label>
+			    <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="gallery">Галерея</label>
+			    <label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="content" value="cart">Корзина</label>
+		      </fieldset>
+		      <button class="button button--grey button--xl" type="submit">Показать</button>
+		    </form>
+	      </section>
 	  
-	    <section class="filter-catalog">
-	    <h2 class="visually-hidden">Наши шаблоны</h2>
-	    <form class="filter-sort" action="https://echo.htmlacademy.ru/" method="get">
-	      <fieldset class="filter-item">
-		    <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-price">По цене</label>
-		    <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-type">По типу</label>
-		    <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-name">По названию</label>
-		    <button type="button" class="button__sort button__sort--active" id="sort-lower">По убыванию</button>
-		    <button type="button" class="button__sort button__sort--active" id="sort-upper">По возрастанию</button>
-		  </fieldset>
-	    </form>
-	    <ul class="catalog-list">
-	      <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/sedona.jpg" width="360" height="575" alt="Шаблон для сайта Седона">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">Sedona</h3>
-			  <p class="catalog__item_description">Информационный сайт для туристов</p>
-			  <button type="button" class="button button--red  button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-		  <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/pink.jpg" width="360" height="575" alt="Шаблон для сайта Пинк">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">Pink app</h3>
-			  <p class="catalog__item_description">Продуктовый лендинг приложения для iOS и Android</p>
-			  <button type="button" class="button button--red  button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-		  <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/barbershop.jpg" width="360" height="575" alt="Шаблон для сайта Барбершопа">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">Barbershop</h3>
-			  <p class="catalog__item_description">Сайт салона красоты. Для мужчин, да.</p>
-			  <button type="button" class="button button--red  button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-		  <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/mishka.jpg" width="360" height="575" alt="Шаблон для сайта Мишка">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">Mishka</h3>
-			  <p class="catalog__item_description">Интернет-магазин вязаных игрушек</p>
-			  <button type="button" class="button button--red  button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-		  <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/aplus.jpg" width="360" height="575" alt="Шаблон для сайта А плюс">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">A Plus</h3>
-			  <p class="catalog__item_description">Лендинг курсов повышения квалификации</p>
-			  <button type="button" class="button button--red  button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-		  <li class="catalog__item">
-		    <div class="catalog__item_border"></div>
-		    <img class="catalog__item_image" src="img/kvast.jpg" width="360" height="575" alt="Шаблон для сайта КВАСТ">
-		    <div class="catalog__item_card">
-		      <h3 class="catalog__item_title">КВАСТ</h3>
-			  <p class="catalog__item_description">Промо-сайт производителя крафтового кваса</p>
-			  <button type="button" class="button button--red button--s">9 900 руб.</button>
-		    </div>
-		  </li>
-	    </ul>
+	      <section class="filter-catalog">
+	      <h2 class="visually-hidden">Наши шаблоны</h2>
+	      <form class="filter-sort" action="https://echo.htmlacademy.ru/" method="get">
+	        <fieldset class="filter-field">
+		      <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-price">По цене</label>
+		      <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-type">По типу</label>
+		     <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-name">По названию</label>
+		      <button type="button" class="button__sort button__sort--active" id="sort-lower">По убыванию</button>
+		      <button type="button" class="button__sort button__sort--active" id="sort-upper">По возрастанию</button>
+		    </fieldset>
+	      </form>
+	      <ul class="catalog-list">
+	        <li class="catalog__item">
+		      <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/sedona.jpg" width="360" height="575" alt="Шаблон для сайта Седона">
+		     <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">Sedona</h3>
+			    <p class="catalog__item_description">Информационный сайт для туристов</p>
+			    <button type="button" class="button button--red  button--s">9 900 руб.</button>
+		      </div>
+		    </li>
+		    <li class="catalog__item">
+		      <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/pink.jpg" width="360" height="575" alt="Шаблон для сайта Пинк">
+		      <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">Pink app</h3>
+			    <p class="catalog__item_description">Продуктовый лендинг приложения для iOS и Android</p>
+			    <button type="button" class="button button--red  button--s">9 900 руб.</button>
+		      </div>
+		   </li>
+		    <li class="catalog__item">
+		      <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/barbershop.jpg" width="360" height="575" alt="Шаблон для сайта Барбершопа">
+		     <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">Barbershop</h3>
+			    <p class="catalog__item_description">Сайт салона красоты. Для мужчин, да.</p>
+			    <button type="button" class="button button--red  button--s">9 900 руб.</button>
+		      </div>
+		    </li>
+		    <li class="catalog__item">
+		      <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/mishka.jpg" width="360" height="575" alt="Шаблон для сайта Мишка">
+		      <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">Mishka</h3>
+			    <p class="catalog__item_description">Интернет-магазин вязаных игрушек</p>
+			    <button type="button" class="button button--red  button--s">9 900 руб.</button>
+		      </div>
+		    </li>
+		    <li class="catalog__item">
+		      <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/aplus.jpg" width="360" height="575" alt="Шаблон для сайта А плюс">
+		      <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">A Plus</h3>
+			    <p class="catalog__item_description">Лендинг курсов повышения квалификации</p>
+			    <button type="button" class="button button--red  button--s">9 900 руб.</button>
+		      </div>
+		    </li>
+		    <li class="catalog__item">
+		     <div class="catalog__item_border"></div>
+		      <img class="catalog__item_image" src="img/kvast.jpg" width="360" height="575" alt="Шаблон для сайта КВАСТ">
+		      <div class="catalog__item_card">
+		        <h3 class="catalog__item_title">КВАСТ</h3>
+			    <p class="catalog__item_description">Промо-сайт производителя крафтового кваса</p>
+			    <button type="button" class="button button--red button--s">9 900 руб.</button>
+		     </div>
+		    </li>
+	      </ul>
 		
-	    </section>
-	    <ul class="pagination">
-	      <li class="pagination__item">
-		    <a class="pagination__link pagination__link--current" href="#" >1</a>
-		  </li>
-		  <li class="pagination__item">
-		    <a class="pagination__link" href="#" >2</a>
-		  </li>
-		  <li class="pagination__item">
-		    <a class="pagination__link" href="#" >3</a>
-		  </li>
-		  <li class="pagination__item">
-		    <button type="button" class=" button button--grey button--xl">Следующая</button>
-		  </li>
-	    </ul>
+	      </section>
+	      <ul class="pagination">
+	        <li class="pagination__item">
+		      <a class="pagination__link pagination__link--current" href="#" >1</a>
+		    </li>
+		    <li class="pagination__item">
+		      <a class="pagination__link" href="#" >2</a>
+		    </li>
+		    <li class="pagination__item">
+		      <a class="pagination__link" href="#" >3</a>
+		    </li>
+		    <li class="pagination__item">
+		     <button type="button" class=" button button--grey button--xl">Следующая</button>
+		    </li>
+	      </ul>
+		</div>
 	  </div>
 	</main>
 	

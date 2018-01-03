@@ -11,3 +11,9 @@
 		background-color: $light-grey;
 	}
 }
+
+.inner-page-content{
+	@include display-flex;
+	@include flex-wrap(wrap);
+	padding: 50px 0;
+}
