@@ -772,7 +772,26 @@ html {
   position: relative;
 }
 
-/* line 28, ../scss/_filter.scss */
+/* line 27, ../scss/_filter.scss */
+.label {
+  position: relative;
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 35px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2f2f2f;
+}
+/* line 38, ../scss/_filter.scss */
+.label:hover, .label:focus {
+  color: black;
+}
+/* line 42, ../scss/_filter.scss */
+.label:active {
+  color: #d5d5d5;
+}
+
+/* line 49, ../scss/_filter.scss */
 .range__controls {
   margin: 0 0 15px 0;
   padding: 0;
@@ -783,7 +802,7 @@ html {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 38, ../scss/_filter.scss */
+/* line 59, ../scss/_filter.scss */
 .range__scale {
   position: absolute;
   top: 39px;
@@ -792,7 +811,7 @@ html {
   height: 2px;
   background-color: #d5d5d5;
 }
-/* line 48, ../scss/_filter.scss */
+/* line 69, ../scss/_filter.scss */
 .range__bar {
   position: absolute;
   top: 0;
@@ -801,7 +820,7 @@ html {
   height: 2px;
   background-color: #00ca74;
 }
-/* line 57, ../scss/_filter.scss */
+/* line 78, ../scss/_filter.scss */
 .range__toggle {
   position: absolute;
   top: -10px;
@@ -814,16 +833,16 @@ html {
   border: 8px solid #ffffff;
   box-shadow: 0 2px 2px 0 #bbbbbb;
 }
-/* line 69, ../scss/_filter.scss */
+/* line 90, ../scss/_filter.scss */
 .range__toggle--min {
   left: 0;
 }
-/* line 73, ../scss/_filter.scss */
+/* line 94, ../scss/_filter.scss */
 .range__toggle--max {
   left: 145px;
 }
 
-/* line 82, ../scss/_filter.scss */
+/* line 103, ../scss/_filter.scss */
 .price__label {
   margin: 0 20px 0 0;
   font-size: 16px;
@@ -831,11 +850,11 @@ html {
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 90, ../scss/_filter.scss */
+/* line 111, ../scss/_filter.scss */
 .price__label:last-child {
   margin: 0;
 }
-/* line 94, ../scss/_filter.scss */
+/* line 115, ../scss/_filter.scss */
 .price__input {
   padding: 10px;
   width: 80px;
@@ -851,37 +870,19 @@ html {
   border-radius: 5px;
 }
 
-/* line 111, ../scss/_filter.scss */
-.radio__label {
-  position: relative;
-  display: block;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 35px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2f2f2f;
-}
-/* line 122, ../scss/_filter.scss */
-.radio__label:hover, .radio__label:focus {
-  color: black;
-}
-/* line 126, ../scss/_filter.scss */
+/* line 135, ../scss/_filter.scss */
 .radio__label:hover .radio__input__check::before, .radio__label:focus .radio__input__check::before {
   border-color: #959595;
 }
-/* line 131, ../scss/_filter.scss */
-.radio__label:active {
-  color: #d5d5d5;
-}
-/* line 134, ../scss/_filter.scss */
+/* line 140, ../scss/_filter.scss */
 .radio__label:active .radio__input__check::before {
   border-color: #d5d5d5;
 }
-/* line 142, ../scss/_filter.scss */
+/* line 146, ../scss/_filter.scss */
 .radio__input {
   display: none;
 }
-/* line 145, ../scss/_filter.scss */
+/* line 149, ../scss/_filter.scss */
 .radio__input__check::before {
   content: "";
   position: absolute;
@@ -893,7 +894,7 @@ html {
   border-radius: 50%;
   border: 4px solid #bbbbbb;
 }
-/* line 158, ../scss/_filter.scss */
+/* line 162, ../scss/_filter.scss */
 .radio__input:checked ~ .radio__input__check::after {
   content: "";
   position: absolute;
@@ -906,16 +907,46 @@ html {
   border-radius: 50%;
   background-color: #bbbbbb;
 }
-/* line 172, ../scss/_filter.scss */
+/* line 176, ../scss/_filter.scss */
 .radio__input:checked:hover ~ .radio__input__check::after, .radio__input:checked:focus ~ .radio__input__check::after {
   background-color: #959595;
 }
-/* line 177, ../scss/_filter.scss */
+/* line 181, ../scss/_filter.scss */
 .radio__input:checked:active ~ .radio__input__check::after {
   background-color: #eeeeee;
 }
 
-/* line 185, ../scss/_filter.scss */
+/* line 193, ../scss/_filter.scss */
+.checkbox__label:hover .checkbox__input__check, .checkbox__label:focus .checkbox__input__check {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
+/* line 199, ../scss/_filter.scss */
+.checkbox__label:active .checkbox__input__check {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  opacity: 0.1;
+}
+/* line 206, ../scss/_filter.scss */
+.checkbox__input {
+  display: none;
+}
+/* line 209, ../scss/_filter.scss */
+.checkbox__input__check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 28px;
+  background: url(../img/checkbox-off.svg) no-repeat 0 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+/* line 220, ../scss/_filter.scss */
+.checkbox__input:checked ~ .checkbox__input__check {
+  background: url(../img/checkbox-on.svg) no-repeat 0 0;
+}
+
+/* line 227, ../scss/_filter.scss */
 .filter-catalog {
   -webkit-flex-basis: 760px;
   flex-basis: 760px;
