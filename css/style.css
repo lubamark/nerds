@@ -946,10 +946,38 @@ html {
   background: url(../img/checkbox-on.svg) no-repeat 0 0;
 }
 
-/* line 227, ../scss/_filter.scss */
-.filter-catalog {
+/* line 1, ../scss/_catalog.scss */
+.catalog {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex-basis: 760px;
   flex-basis: 760px;
+}
+/* line 6, ../scss/_catalog.scss */
+.catalog-sort {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+}
+/* line 11, ../scss/_catalog.scss */
+.catalog-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 19, ../scss/_catalog.scss */
+.catalog__item {
+  -webkit-flex-basis: 360px;
+  flex-basis: 360px;
+}
+/* line 23, ../scss/_catalog.scss */
+.catalog__item:nth-child(2n+1) {
+  margin-right: 40px;
 }
 
 /* line 1, ../scss/_modal.scss */

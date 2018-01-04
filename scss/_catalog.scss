@@ -1,0 +1,27 @@
+.catalog{
+	@include display-flex;
+	@include flex-wrap(wrap);
+	@include flex-basis(760px);
+	
+	&-sort{
+		@include flex-basis(100%);
+		
+	}
+	
+	&-list{
+		@include display-flex;
+		@include flex-wrap(wrap);
+		margin: 0;
+		padding: 0;
+		list-style:none;
+	}
+	
+	&__item{
+		@include flex-basis(360px);
+	}
+	
+	&__item:nth-child(2n+1){
+		margin-right: 40px;
+	}
+}
+
