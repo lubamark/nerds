@@ -823,7 +823,7 @@ html {
   left: 145px;
 }
 
-/* line 81, ../scss/_filter.scss */
+/* line 82, ../scss/_filter.scss */
 .price__label {
   margin: 0 20px 0 0;
   font-size: 16px;
@@ -831,11 +831,11 @@ html {
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 89, ../scss/_filter.scss */
+/* line 90, ../scss/_filter.scss */
 .price__label:last-child {
   margin: 0;
 }
-/* line 93, ../scss/_filter.scss */
+/* line 94, ../scss/_filter.scss */
 .price__input {
   padding: 10px;
   width: 80px;
@@ -851,7 +851,71 @@ html {
   border-radius: 5px;
 }
 
-/* line 110, ../scss/_filter.scss */
+/* line 111, ../scss/_filter.scss */
+.radio__label {
+  position: relative;
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 35px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2f2f2f;
+}
+/* line 122, ../scss/_filter.scss */
+.radio__label:hover, .radio__label:focus {
+  color: black;
+}
+/* line 126, ../scss/_filter.scss */
+.radio__label:hover .radio__input__check::before, .radio__label:focus .radio__input__check::before {
+  border-color: #959595;
+}
+/* line 131, ../scss/_filter.scss */
+.radio__label:active {
+  color: #d5d5d5;
+}
+/* line 134, ../scss/_filter.scss */
+.radio__label:active .radio__input__check::before {
+  border-color: #d5d5d5;
+}
+/* line 142, ../scss/_filter.scss */
+.radio__input {
+  display: none;
+}
+/* line 145, ../scss/_filter.scss */
+.radio__input__check::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 4px solid #bbbbbb;
+}
+/* line 158, ../scss/_filter.scss */
+.radio__input:checked ~ .radio__input__check::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #bbbbbb;
+}
+/* line 172, ../scss/_filter.scss */
+.radio__input:checked:hover ~ .radio__input__check::after, .radio__input:checked:focus ~ .radio__input__check::after {
+  background-color: #959595;
+}
+/* line 177, ../scss/_filter.scss */
+.radio__input:checked:active ~ .radio__input__check::after {
+  background-color: #eeeeee;
+}
+
+/* line 185, ../scss/_filter.scss */
 .filter-catalog {
   -webkit-flex-basis: 760px;
   flex-basis: 760px;
