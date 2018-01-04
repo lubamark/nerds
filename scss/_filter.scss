@@ -10,7 +10,7 @@
 	}
 	
 	&__legend{
-		margin: 0;
+		margin: 0 0 20px 0;
 		padding: 0;
 		
 		font-size: 18px; 
@@ -18,8 +18,96 @@
 		text-transform: uppercase;
 		font-weight: 700;
 	}
+	
+	&__range{
+		position: relative;
+	}
 }
+
+.range{
+	&__controls{
+		margin: 0 0 15px 0;
+		padding: 0;
+		width: 100%;
+		height: 80px;
+		
+		background-color: $light-grey;
+		@include border-radius(5px);
+	}
+	
+	&__scale{
+		position: absolute;
+		top: 39px;
+		left: 7.5%;
+		width: 85%;
+		height: 2px;
+		
+		background-color: darken($light-grey, 10%);
+	}
+	
+	&__bar{
+		position: absolute;
+		top: 0;
+		left: 5px;
+		width: 145px;
+		height: 2px;
+		background-color: $green;
+	}
+	
+	&__toggle{
+		position: absolute;
+		top: -10px;
+		
+		width: 20px;
+		height: 20px;
+		background-color: darken($light-grey, 20%);
+		
+		@include border-radius(50%);
+		border: 8px solid #ffffff;
+		box-shadow: 0 2px 2px 0 darken($light-grey, 20%);
+		
+		&--min{
+			left: 0;
+		}
+		
+		&--max{
+			left: 145px;
+		}
+	}
+	
+}
+.price{
+	
+	&__label{
+		margin: 0 20px 0 0;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	
+	&__label:last-child{
+		margin: 0;
+	}
+	
+	&__input{
+		padding: 10px;
+		width: 80px;
+		height: 38px;
+		
+		font-family: inherit;
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		
+		background-color: $light-grey;
+		border: none;
+		@include border-radius(5px);
+	}
+}
+
 
 .filter-catalog{
 	@include flex-basis(760px);
 }
+

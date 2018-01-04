@@ -55,7 +55,12 @@ $button-sizes: (
 	}
 	
 	&--grey{
+		color: #000000;
 		@include button-condition($light-grey);
+		
+		&:active{
+			color: rgba(0, 0, 0, 0.3);
+		}
 	}
 	
 	@each $key, $value in $button-sizes{
