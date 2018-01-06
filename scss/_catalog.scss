@@ -5,7 +5,6 @@
 	
 	&-sort{
 		@include flex-basis(100%);
-		
 	}
 	
 	&-list{
@@ -25,3 +24,67 @@
 	}
 }
 
+	.sort{
+		&-field{
+			@include display-flex;
+			@include flex-direction(row);
+			@include flex-wrap(nowrap);
+			margin: 0 0 50px 0;
+			padding: 0;
+			
+			border: none;
+		}
+		
+		
+		&-buttons{
+			margin-left: auto;
+			
+			&__item{
+				margin: 0;
+				padding: 0;
+				@include opacity(0.15);
+				
+				background-color: transparent;
+				border: none;
+				
+				&:hover,
+				&:focus{
+					@include opacity(0.3);
+				}
+				
+				&:active,
+				&--active{
+					@include opacity(0.7);
+				}
+			}
+		}
+		
+		&__legend{
+			@extend .filter__legend;
+			@include flex-basis(360px);
+			@include flex-shrink(0);
+			margin-right: 40px;
+		}
+		
+		&__label{
+			font-size: 14px;
+			line-height: 18px;
+			text-transform: uppercase;
+			color: darken($light-grey, 20%);
+			margin-right: 25px;
+		}
+		
+		&__input{
+			&:hover + .sort__label,
+			&:focus + .sort__label{
+				color: darken($light-grey, 42%);
+			}
+			&:active + .sort__label{
+				color: darken($light-grey, 100%);
+			}
+			
+			&:checked + .sort__label{
+				color: darken($light-grey, 100%);
+			}
+		}
+	}

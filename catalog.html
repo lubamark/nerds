@@ -81,12 +81,28 @@
 	      <section class="catalog">
 	      <h2 class="visually-hidden">Наши шаблоны</h2>
 	      <form class="catalog-sort" action="https://echo.htmlacademy.ru/" method="get">
-	        <fieldset class="filter-field">
-		      <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-price">По цене</label>
-		      <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-type">По типу</label>
-		     <label class="radio-sort"><input class="sort__input" type="radio" name="sort" value="sort-by-name">По названию</label>
-		      <button type="button" class="button__sort button__sort--active" id="sort-lower">По убыванию</button>
-		      <button type="button" class="button__sort button__sort--active" id="sort-upper">По возрастанию</button>
+	        <fieldset class="sort-field">
+	          <p class="sort__legend">Сортировать: </p>
+			  <div class="sort-controls">
+				<input class="sort__input visually-hidden" type="radio" name="sort" value="sort-by-price" id="sort-by-price" cheked>
+				<label class="sort__label" for="sort-by-price">По цене</label>
+				<input class="sort__input visually-hidden" type="radio" name="sort" value="sort-by-type" id="sort-by-type">
+				<label class="sort__label" for="sort-by-type">По типу</label>
+				<input class="sort__input visually-hidden" type="radio" name="sort" value="sort-by-name" id="sort-by-name">
+				<label class="sort__label" for="sort-by-name" >По названию</label>
+			  </div>
+			  <span class="sort-buttons">
+		        <button type="button" class="sort-buttons__item sort-buttons__item--down sort-buttons__item--active" id="sort-down"><span class="visually-hidden">По убыванию</span>
+					<svg version="1.1" id="Layer_1" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10">
+						<polygon fil="#000000" points="5.5,10 0,0 11,0 "/>
+					</svg>
+				</button>
+		        <button type="button" class="sort-buttons__item sort-buttons__item--up" id="sort-up"><span class="visually-hidden">По возрастанию</span>
+					<svg class="button-up" version="1.1" id="Layer_1" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10">
+						<polygon fill="#000000" points="5.5,0 0,10 11,10 "/>
+					</svg>
+				</button>
+			  </span>
 		    </fieldset>
 	      </form>
 	      <ul class="catalog-list">

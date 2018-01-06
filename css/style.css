@@ -759,7 +759,7 @@ html {
   border: none;
 }
 /* line 12, ../scss/_filter.scss */
-.filter__legend {
+.filter__legend, .sort__legend {
   margin: 0 0 20px 0;
   padding: 0;
   font-size: 18px;
@@ -960,7 +960,7 @@ html {
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
 }
-/* line 11, ../scss/_catalog.scss */
+/* line 10, ../scss/_catalog.scss */
 .catalog-list {
   display: -webkit-flex;
   display: flex;
@@ -970,14 +970,78 @@ html {
   padding: 0;
   list-style: none;
 }
-/* line 19, ../scss/_catalog.scss */
+/* line 18, ../scss/_catalog.scss */
 .catalog__item {
   -webkit-flex-basis: 360px;
   flex-basis: 360px;
 }
-/* line 23, ../scss/_catalog.scss */
+/* line 22, ../scss/_catalog.scss */
 .catalog__item:nth-child(2n+1) {
   margin-right: 40px;
+}
+
+/* line 28, ../scss/_catalog.scss */
+.sort-field {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0 0 50px 0;
+  padding: 0;
+  border: none;
+}
+/* line 39, ../scss/_catalog.scss */
+.sort-buttons {
+  margin-left: auto;
+}
+/* line 42, ../scss/_catalog.scss */
+.sort-buttons__item {
+  margin: 0;
+  padding: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  background-color: transparent;
+  border: none;
+}
+/* line 50, ../scss/_catalog.scss */
+.sort-buttons__item:hover, .sort-buttons__item:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+/* line 55, ../scss/_catalog.scss */
+.sort-buttons__item:active, .sort-buttons__item--active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 62, ../scss/_catalog.scss */
+.sort__legend {
+  -webkit-flex-basis: 360px;
+  flex-basis: 360px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+/* line 69, ../scss/_catalog.scss */
+.sort__label {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #bbbbbb;
+  margin-right: 25px;
+}
+/* line 78, ../scss/_catalog.scss */
+.sort__input:hover + .sort__label, .sort__input:focus + .sort__label {
+  color: #838383;
+}
+/* line 82, ../scss/_catalog.scss */
+.sort__input:active + .sort__label {
+  color: black;
+}
+/* line 86, ../scss/_catalog.scss */
+.sort__input:checked + .sort__label {
+  color: black;
 }
 
 /* line 1, ../scss/_modal.scss */
