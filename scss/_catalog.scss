@@ -16,7 +16,82 @@
 	}
 	
 	&__item{
+		position: relative;
+		
 		@include flex-basis(360px);
+		@include border-radius(5px);
+		overflow: hidden;
+		
+		margin-bottom: 35px;
+		
+		&_border{
+			width: 100%;
+			height: 40px;
+			background-color: $light-grey;
+			
+			&::before{
+				content: "";
+				position: absolute;
+				
+				left: 15px;
+				top: 13px;
+				
+				width: 15px;
+				height: 15px;
+				
+				background-color: #ffffff;
+				@include border-radius(50%);
+				box-shadow: 
+					22px 0 0 0 #ffffff,
+					44px 0 0 0 #ffffff,;
+			}
+		}
+		
+		&_card{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			
+			display: none;
+			margin: 0;
+			padding: 30px 60px 40px 60px; 
+			width: 100%;
+			
+			text-align: center;
+			background-color: $light-grey;
+		}
+		
+		&_title{
+			margin: 0 0 20px 0;
+			padding: 0;
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		
+		&_description{
+			margin: 0 0 20px 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: 400;
+			color: darken($light-grey, 60%);
+		}
+		
+		
+		&:hover,
+		&:focus{
+			
+			.catalog__item_border{
+				background-color: darken($light-grey, 63%);
+			}
+			
+			.catalog__item_card{
+				display: block;
+			}
+		}
+		
 	}
 	
 	&__item:nth-child(2n+1){
@@ -24,67 +99,4 @@
 	}
 }
 
-	.sort{
-		&-field{
-			@include display-flex;
-			@include flex-direction(row);
-			@include flex-wrap(nowrap);
-			margin: 0 0 50px 0;
-			padding: 0;
-			
-			border: none;
-		}
-		
-		
-		&-buttons{
-			margin-left: auto;
-			
-			&__item{
-				margin: 0;
-				padding: 0;
-				@include opacity(0.15);
-				
-				background-color: transparent;
-				border: none;
-				
-				&:hover,
-				&:focus{
-					@include opacity(0.3);
-				}
-				
-				&:active,
-				&--active{
-					@include opacity(0.7);
-				}
-			}
-		}
-		
-		&__legend{
-			@extend .filter__legend;
-			@include flex-basis(360px);
-			@include flex-shrink(0);
-			margin-right: 40px;
-		}
-		
-		&__label{
-			font-size: 14px;
-			line-height: 18px;
-			text-transform: uppercase;
-			color: darken($light-grey, 20%);
-			margin-right: 25px;
-		}
-		
-		&__input{
-			&:hover + .sort__label,
-			&:focus + .sort__label{
-				color: darken($light-grey, 42%);
-			}
-			&:active + .sort__label{
-				color: darken($light-grey, 100%);
-			}
-			
-			&:checked + .sort__label{
-				color: darken($light-grey, 100%);
-			}
-		}
-	}
+

@@ -972,15 +972,79 @@ html {
 }
 /* line 18, ../scss/_catalog.scss */
 .catalog__item {
+  position: relative;
   -webkit-flex-basis: 360px;
   flex-basis: 360px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 35px;
 }
-/* line 22, ../scss/_catalog.scss */
+/* line 27, ../scss/_catalog.scss */
+.catalog__item_border {
+  width: 100%;
+  height: 40px;
+  background-color: #eeeeee;
+}
+/* line 32, ../scss/_catalog.scss */
+.catalog__item_border::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 22px 0 0 0 #ffffff, 44px 0 0 0 #ffffff;
+}
+/* line 50, ../scss/_catalog.scss */
+.catalog__item_card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 30px 60px 40px 60px;
+  width: 100%;
+  text-align: center;
+  background-color: #eeeeee;
+}
+/* line 64, ../scss/_catalog.scss */
+.catalog__item_title {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 73, ../scss/_catalog.scss */
+.catalog__item_description {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #555555;
+}
+/* line 86, ../scss/_catalog.scss */
+.catalog__item:hover .catalog__item_border, .catalog__item:focus .catalog__item_border {
+  background-color: #4d4d4d;
+}
+/* line 90, ../scss/_catalog.scss */
+.catalog__item:hover .catalog__item_card, .catalog__item:focus .catalog__item_card {
+  display: block;
+}
+/* line 97, ../scss/_catalog.scss */
 .catalog__item:nth-child(2n+1) {
   margin-right: 40px;
 }
 
-/* line 28, ../scss/_catalog.scss */
+/* line 2, ../scss/_sort.scss */
 .sort-field {
   display: -webkit-flex;
   display: flex;
@@ -988,15 +1052,15 @@ html {
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
   padding: 0;
   border: none;
 }
-/* line 39, ../scss/_catalog.scss */
+/* line 13, ../scss/_sort.scss */
 .sort-buttons {
   margin-left: auto;
 }
-/* line 42, ../scss/_catalog.scss */
+/* line 16, ../scss/_sort.scss */
 .sort-buttons__item {
   margin: 0;
   padding: 0;
@@ -1005,25 +1069,26 @@ html {
   background-color: transparent;
   border: none;
 }
-/* line 50, ../scss/_catalog.scss */
+/* line 24, ../scss/_sort.scss */
 .sort-buttons__item:hover, .sort-buttons__item:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 55, ../scss/_catalog.scss */
+/* line 29, ../scss/_sort.scss */
 .sort-buttons__item:active, .sort-buttons__item--active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 62, ../scss/_catalog.scss */
+/* line 36, ../scss/_sort.scss */
 .sort__legend {
   -webkit-flex-basis: 360px;
   flex-basis: 360px;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
+  margin-bottom: 0;
   margin-right: 40px;
 }
-/* line 69, ../scss/_catalog.scss */
+/* line 44, ../scss/_sort.scss */
 .sort__label {
   font-size: 14px;
   line-height: 18px;
@@ -1031,15 +1096,15 @@ html {
   color: #bbbbbb;
   margin-right: 25px;
 }
-/* line 78, ../scss/_catalog.scss */
+/* line 53, ../scss/_sort.scss */
 .sort__input:hover + .sort__label, .sort__input:focus + .sort__label {
   color: #838383;
 }
-/* line 82, ../scss/_catalog.scss */
+/* line 57, ../scss/_sort.scss */
 .sort__input:active + .sort__label {
   color: black;
 }
-/* line 86, ../scss/_catalog.scss */
+/* line 61, ../scss/_sort.scss */
 .sort__input:checked + .sort__label {
   color: black;
 }
