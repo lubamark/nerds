@@ -280,11 +280,11 @@ html {
   border-radius: 50%;
 }
 
-/* line 24, ../scss/_button.scss */
+/* line 31, ../scss/_button.scss */
 .button {
   display: inline-block;
   vertical-align: middle;
-  padding: 20px;
+  padding: 17px;
   font-family: inherit;
   font-size: 16px;
   line-height: 16px;
@@ -298,91 +298,119 @@ html {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 41, ../scss/_button.scss */
+/* line 48, ../scss/_button.scss */
 .button:active {
   -moz-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.3);
 }
-/* line 46, ../scss/_button.scss */
+/* line 53, ../scss/_button.scss */
 .button--red {
   background-color: #fb565a;
 }
-/* line 12, ../scss/_button.scss */
+/* line 13, ../scss/_button.scss */
 .button--red:hover, .button--red:focus {
   background-color: #e74246;
   outline: none;
 }
-/* line 17, ../scss/_button.scss */
+/* line 18, ../scss/_button.scss */
 .button--red:active {
   background-color: #dd383c;
   outline: none;
 }
-/* line 50, ../scss/_button.scss */
+/* line 23, ../scss/_button.scss */
+.button--red--current {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #fb565a;
+}
+/* line 57, ../scss/_button.scss */
 .button--green {
   background-color: #00ca74;
 }
-/* line 12, ../scss/_button.scss */
+/* line 13, ../scss/_button.scss */
 .button--green:hover, .button--green:focus {
   background-color: #00b660;
   outline: none;
 }
-/* line 17, ../scss/_button.scss */
+/* line 18, ../scss/_button.scss */
 .button--green:active {
   background-color: #00ac56;
   outline: none;
 }
-/* line 54, ../scss/_button.scss */
+/* line 23, ../scss/_button.scss */
+.button--green--current {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #00ca74;
+}
+/* line 61, ../scss/_button.scss */
 .button--yellow {
   background-color: #efc84a;
 }
-/* line 12, ../scss/_button.scss */
+/* line 13, ../scss/_button.scss */
 .button--yellow:hover, .button--yellow:focus {
   background-color: #dbb436;
   outline: none;
 }
-/* line 17, ../scss/_button.scss */
+/* line 18, ../scss/_button.scss */
 .button--yellow:active {
   background-color: #d1aa2c;
   outline: none;
 }
-/* line 58, ../scss/_button.scss */
+/* line 23, ../scss/_button.scss */
+.button--yellow--current {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #efc84a;
+}
+/* line 65, ../scss/_button.scss */
 .button--grey {
   color: #000000;
   background-color: #eeeeee;
 }
-/* line 12, ../scss/_button.scss */
+/* line 13, ../scss/_button.scss */
 .button--grey:hover, .button--grey:focus {
   background-color: #dadada;
   outline: none;
 }
-/* line 17, ../scss/_button.scss */
+/* line 18, ../scss/_button.scss */
 .button--grey:active {
   background-color: #d0d0d0;
   outline: none;
 }
-/* line 62, ../scss/_button.scss */
+/* line 23, ../scss/_button.scss */
+.button--grey--current {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+}
+/* line 69, ../scss/_button.scss */
 .button--grey:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/* line 68, ../scss/_button.scss */
+/* line 77, ../scss/_button.scss */
+.button--sq {
+  width: 50px;
+}
+/* line 77, ../scss/_button.scss */
 .button--xs {
   width: 160px;
 }
-/* line 68, ../scss/_button.scss */
+/* line 77, ../scss/_button.scss */
 .button--s {
   width: 200px;
 }
-/* line 68, ../scss/_button.scss */
+/* line 77, ../scss/_button.scss */
 .button--m {
   width: 220px;
 }
-/* line 68, ../scss/_button.scss */
+/* line 77, ../scss/_button.scss */
 .button--l {
   width: 240px;
 }
-/* line 68, ../scss/_button.scss */
+/* line 77, ../scss/_button.scss */
 .button--xl {
   width: 260px;
 }
@@ -976,9 +1004,9 @@ html {
   position: relative;
   -webkit-flex-basis: 360px;
   flex-basis: 360px;
-  -moz-border-radius: 5px;
+  -moz-border-radius: 5px 5px 0 0;
   -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   overflow: hidden;
   margin-bottom: 35px;
 }
@@ -1108,6 +1136,23 @@ html {
 /* line 61, ../scss/_sort.scss */
 .sort__input:checked + .sort__label {
   color: black;
+}
+
+/* line 1, ../scss/_pagination.scss */
+.pagination {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 8, ../scss/_pagination.scss */
+.pagination__item {
+  margin-right: 10px;
+}
+/* line 12, ../scss/_pagination.scss */
+.pagination__item:last-child {
+  margin-right: 0;
 }
 
 /* line 1, ../scss/_modal.scss */
