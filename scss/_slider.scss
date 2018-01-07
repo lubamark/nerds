@@ -1,7 +1,6 @@
 .slider{
-  min-height: 415px;
   background-color: $light-grey;
-  margin-bottom: 85px;
+  margin-bottom: 80px;
 }
 
 .input-slider{
@@ -58,24 +57,27 @@
 .slide{
 	display: none;
 	min-width: 100%;
-	min-height: 415px;
+	min-height: 405px;
 	padding: 50px 0;
 
 	
 	
 	background-repeat: no-repeat;
-	background-position: 100% 0;
+	
 	
 	&--1{
-		background-image: url(../img/slide-1.png); 
+		background-image: url(../img/slide-1.png);
+		background-position: 93% -5px;
 	}
 	
 	&--2{
 		background-image: url(../img/slide-2.png); 
+		background-position: 100% 0;
 	}
 	
 	&--3{
-		background-image: url(../img/slide-3.png); 
+		background-image: url(../img/slide-3.png);
+		background-position: 100% 0;		
 	}
 	
 	&__title{
