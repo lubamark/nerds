@@ -604,22 +604,54 @@ html {
   -webkit-justify-content: space-around;
   justify-content: space-around;
   margin: 0 0 80px 0;
-  padding: 45px 0;
+  padding: 5px 0 0 0;
   list-style: none;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
 }
 /* line 12, ../scss/_projects.scss */
+.projects-list__logo {
+  margin: auto;
+}
+/* line 16, ../scss/_projects.scss */
+.projects-list__item {
+  position: relative;
+  margin-right: 40px;
+}
+/* line 21, ../scss/_projects.scss */
+.projects-list__item:last-child {
+  margin-right: 0;
+}
+/* line 25, ../scss/_projects.scss */
+.projects-list__item::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  right: -20px;
+  width: 2px;
+  height: 50px;
+  background-color: #eeeeee;
+}
+/* line 36, ../scss/_projects.scss */
+.projects-list__item:last-child::after {
+  display: none;
+}
+/* line 40, ../scss/_projects.scss */
 .projects-list__link {
+  display: -webkit-flex;
+  display: flex;
+  width: 260px;
+  height: 180px;
+  padding: 0;
   -webkit-filter: opacity(0.2);
   filter: opacity(0.2);
 }
-/* line 16, ../scss/_projects.scss */
+/* line 49, ../scss/_projects.scss */
 .projects-list__link:hover, .projects-list__link:focus {
   -webkit-filter: opacity(1);
   filter: opacity(1);
 }
-/* line 21, ../scss/_projects.scss */
+/* line 54, ../scss/_projects.scss */
 .projects-list__link:active {
   -webkit-filter: opacity(0.1);
   filter: opacity(0.1);
