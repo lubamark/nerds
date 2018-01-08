@@ -4,13 +4,18 @@
 	margin-right: 140px;
 	
 	&-field{
-		margin-bottom: 50px;
+		margin-bottom: 25px;
+		padding: 0;
 	
 		border: none;
 	}
 	
+	&-field:last-of-type{
+		margin-bottom: 30px;
+	}
+	
 	&__legend{
-		margin: 0 0 20px 0;
+		margin: 0 0 15px 0;
 		padding: 0;
 		
 		font-size: 18px; 
@@ -21,6 +26,7 @@
 	
 	&__range{
 		position: relative;
+		margin: 35px 0 30px 0;
 	}
 }
 
@@ -47,7 +53,7 @@
 
 .range{
 	&__controls{
-		margin: 0 0 15px 0;
+		margin: 0 0 12px 0;
 		padding: 0;
 		width: 100%;
 		height: 80px;
@@ -92,7 +98,7 @@
 		}
 		
 		&--max{
-			left: 145px;
+			left: 140px;
 		}
 	}
 	
@@ -100,7 +106,14 @@
 
 .price{
 	
+	&-controls{
+		@include display-flex;
+		@include justify-content(space-between);
+		
+	}
+	
 	&__label{
+		
 		margin: 0 20px 0 0;
 		font-size: 16px;
 		line-height: 22px;
@@ -114,6 +127,7 @@
 	
 	&__input{
 		padding: 10px;
+		margin-left: 5px;
 		width: 80px;
 		height: 38px;
 		
@@ -126,6 +140,7 @@
 		border: none;
 		@include border-radius(5px);
 	}
+	
 }
 
 .radio{
