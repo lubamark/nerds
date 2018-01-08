@@ -3,7 +3,7 @@
 	@include justify-content(space-around);
 	
 	margin: 0 0 80px 0;
-	padding: 5px 0 0 0;
+	padding: 10px 0;
 	list-style: none;
 	
 	border-top: 2px solid $light-grey;
@@ -40,7 +40,7 @@
 	&__link{
 		@include display-flex;
 		width: 260px;
-		height: 180px;
+		height: 160px;
 		padding: 0;
 		
 		@include filter(opacity(0.2));
