@@ -33,11 +33,11 @@
 		font-size: 16px;
 		line-height: 18px;
 		font-weight: 400;
-		color: #666666;;
-	}
-	
-	&__caption:last-of-type{
-		margin-bottom: 35px;
+		color: #666666;
+		
+		&:last-of-type{
+			margin-bottom: 35px;
+		}
 	}
 	
 	&__link{

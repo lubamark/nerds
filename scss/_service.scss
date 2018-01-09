@@ -22,10 +22,10 @@
 	  @include justify-content(flex-start);
 	  @include flex-basis(300px);
 	  margin-right: 100px;
-  }
-  
-  &__item:last-child{
-	  margin-right: 0;
+	  
+	  &:last-child{
+		margin-right: 0;
+	}
   }
   
   &__img{

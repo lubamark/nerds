@@ -70,52 +70,44 @@
 	
 	&__item{
 		position: relative;
-		
 		padding-left: 35px;
 		
-	}
-	
-	&__item::before{
-		content: "";
-		
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 25px;
-		height: 2px;
-		
-		background-color: $red;
-		
+		&::before{
+			content: "";
+			
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 25px;
+			height: 2px;
+			
+			background-color: $red;
+		}
 	}
 }
 
-.studio-facts{
-  @include flex-basis(360px);
-	
-	
-  }
 .studio-logo{
 	margin-bottom: 30px;
 }
 
 .studio-facts{
+	@include flex-basis(360px);
 	
 	&-list{
-	@include display-flex;
-	
-	
-	margin: 0;
-	padding: 0;
-	
-	list-style: none;
+		@include display-flex;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 	}
 	
 	&__item{
 		margin-right: 25px;
-	}
-	
-	&__item:last-child{
-		margin-right: 0;
+		
+		&:last-child{
+			margin-right: 0;
+		}
 	}
 }
 

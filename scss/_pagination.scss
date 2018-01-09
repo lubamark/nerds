@@ -7,9 +7,9 @@
 	
 	&__item{
 		margin-right: 10px;
-	}
-	
-	&__item:last-child{
-		margin-right: 0;
+		
+		&:last-child{
+			margin-right: 0;
+		}
 	}
 }

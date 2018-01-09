@@ -16,25 +16,25 @@
 	&__item{
 		position: relative;
 		margin-right: 40px;
-	}
-	
-	&__item:last-child{
-		margin-right: 0;
-	}
-	
-	&__item::after{
-		content: "";
-		position: absolute;
-		top: 65px;
-		right: -20px;
 		
-		width: 2px;
-		height: 50px;
-		background-color: $light-grey;
-	}
-	
-	&__item:last-child::after{
-		display: none;
+		&:last-child{
+			margin-right: 0;
+		}
+		
+		&::after{
+			content: "";
+			position: absolute;
+			top: 65px;
+			right: -20px;
+			
+			width: 2px;
+			height: 50px;
+			background-color: $light-grey;
+		}
+		
+		&:last-child::after{
+			display: none;
+		}
 	}
 	
 	&__link{
@@ -44,15 +44,14 @@
 		padding: 0;
 		
 		@include filter(opacity(0.2));
+		
+		&:hover,
+		&:focus{
+			@include filter(opacity(1));
+		}
+		
+		&:active{
+			@include filter(opacity(0.1));
+		}
 	}
-	
-	&__link:hover,
-	&__link:focus,	{
-	@include filter(opacity(1));
-	}
-	
-	&__link:active{
-	@include filter(opacity(0.1));
-	}
-	
 }

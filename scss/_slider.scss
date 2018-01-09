@@ -39,10 +39,10 @@
 	&__item{
 	position: relative;
 	margin-right: 18px;
-	}
 	
-	&__item:last-child{
-		margin-right:0;
+		&:last-child{
+			margin-right:0;
+		}
 	}
 }
 
@@ -113,8 +113,7 @@
 
 #slide-1:checked ~ .slider-toggle .slider-toggle__label--1::before,
 #slide-2:checked ~ .slider-toggle .slider-toggle__label--2::before,
-#slide-3:checked ~ .slider-toggle .slider-toggle__label--3::before 
-{
+#slide-3:checked ~ .slider-toggle .slider-toggle__label--3::before {
 	content: "";
 	
 	position: absolute;

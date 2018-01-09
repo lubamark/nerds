@@ -42,9 +42,10 @@
   list-style: none;
   &__item{
 	  margin-right: 45px;
-  }
-  &__item::last-child{
+	  
+	  &:last-child{
 	  margin-right: 0;
+	}
   }
   
   &__link{
@@ -56,22 +57,23 @@
 	  text-transform: uppercase;
 	  text-decoration: none;
 	  color: #000;
+	  
+	  &:hover,
+	  &:focus{
+		color: $red;
+	  }
+	  
+	  &:active{
+		color: $grey;
+	  }
+	  
+	  &--current{
+		border-bottom: 2px solid $red;
+	  }
+	  
+	  &--cart{
+		padding-left: 40px;
+		background: url(../img/icon-cart.svg) no-repeat 0 18px;
+	  }
   }
-  &__link:hover,
-  &__link:focus{
-	  color: $red;
-  }
-  
-  &__link:active{
-	  color: $grey;
-  }
-
-  &__link--current{
-	  border-bottom: 2px solid $red;
-  }
-  &__link--cart{
-	  padding-left: 40px;
-	  background: url(../img/icon-cart.svg) no-repeat 0 18px;
-  }
-  
 }

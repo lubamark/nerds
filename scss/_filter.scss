@@ -6,12 +6,11 @@
 	&-field{
 		margin-bottom: 25px;
 		padding: 0;
-	
 		border: none;
-	}
-	
-	&-field:last-of-type{
-		margin-bottom: 30px;
+		
+		&:last-of-type{
+			margin-bottom: 30px;
+		}
 	}
 	
 	&__legend{
@@ -45,6 +44,7 @@
 	&:focus{
 		color: darken($light-grey, 100%);
 	}
+	
 	&:active{
 		color: darken($light-grey, 10%);
 	}
@@ -119,11 +119,12 @@
 		line-height: 22px;
 		font-weight: 400;
 		text-transform: uppercase;
+		
+		&:last-child{
+			margin: 0;
+		}
 	}
 	
-	&__label:last-child{
-		margin: 0;
-	}
 	
 	&__input{
 		padding: 10px;

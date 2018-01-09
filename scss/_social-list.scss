@@ -9,10 +9,10 @@
 	
 	&__item{
 		margin-right: 12px;
-	}
-	
-	&__item:last-child{
-		margin-right: 0;
+		
+		&:last-child{
+			margin-right: 0;
+		}
 	}
 	
 	&__link{
