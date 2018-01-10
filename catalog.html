@@ -185,7 +185,7 @@
     <footer class="footer">
 	  <section class="contacts-block">
 		<h2 class="visually-hidden">Наши контакты</h2>
-		<div class="ya-map" id="map">
+		<div class="ggl-map" id="map">
 		  <div class="container--map">
 		    <img class="map_img" src="img/map.png"  width="1200" height="415" alt="Адрес студии Нёрдс: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8, телефон +7 (812) 275-75-75.">
 		  </div>
@@ -246,5 +246,11 @@
 	  </form>
 	  <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
 	</section>
+	
+		<script async defer src="js/map.js">
+    </script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3gfZ_HuVHgRp7QqiZfHuft3gbYNIWPdY&callback=initMap">
+    </script>
+	
   </body>
 </html>

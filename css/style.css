@@ -701,7 +701,7 @@ html {
 .contacts-block {
   position: relative;
   margin-bottom: 70px;
-  min-height: 415px;
+  height: 415px;
 }
 
 /* line 9, ../scss/_contacts-block.scss */
@@ -742,9 +742,10 @@ html {
 }
 
 /* line 49, ../scss/_contacts-block.scss */
-.ya-map {
+.ggl-map {
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
 /* line 1, ../scss/_social-list.scss */
