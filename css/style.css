@@ -1241,8 +1241,12 @@ html {
 .modal-show {
   display: -webkit-flex;
   display: flex;
+  -webkit-animation: feedback-animation 0.5s;
+  animation: feedback-animation 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
-/* line 16, ../scss/_modal.scss */
+/* line 20, ../scss/_modal.scss */
 .modal__close {
   position: absolute;
   z0index: 200;
@@ -1254,7 +1258,7 @@ html {
   border: none;
   cursor: pointer;
 }
-/* line 30, ../scss/_modal.scss */
+/* line 34, ../scss/_modal.scss */
 .modal__close::before, .modal__close::after {
   content: "";
   position: absolute;
@@ -1264,30 +1268,30 @@ html {
   height: 20px;
   background-color: #fdbabb;
 }
-/* line 43, ../scss/_modal.scss */
+/* line 47, ../scss/_modal.scss */
 .modal__close::before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 47, ../scss/_modal.scss */
+/* line 51, ../scss/_modal.scss */
 .modal__close::after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 51, ../scss/_modal.scss */
+/* line 55, ../scss/_modal.scss */
 .modal__close:hover::before, .modal__close:hover::after, .modal__close:focus::before, .modal__close:focus::after {
   background-color: #fb565a;
 }
-/* line 58, ../scss/_modal.scss */
+/* line 62, ../scss/_modal.scss */
 .modal__close:active::before, .modal__close:active::after {
   background-color: #fec9ca;
 }
 
-/* line 65, ../scss/_modal.scss */
+/* line 69, ../scss/_modal.scss */
 .modal-feedback {
   position: fixed;
   top: 0;
@@ -1305,7 +1309,13 @@ html {
   margin: auto;
 }
 
-/* line 84, ../scss/_modal.scss */
+/* line 87, ../scss/_modal.scss */
+.modal-error {
+  -webkit-animation: error-animatinon 0.5s;
+  animation: error-animatinon 0.5s;
+}
+
+/* line 93, ../scss/_modal.scss */
 .feedback__title {
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
@@ -1317,12 +1327,12 @@ html {
   line-height: 45px;
   font-weight: 500;
 }
-/* line 95, ../scss/_modal.scss */
+/* line 104, ../scss/_modal.scss */
 .feedback-form {
   height: 350px;
   width: 100%;
 }
-/* line 100, ../scss/_modal.scss */
+/* line 109, ../scss/_modal.scss */
 .feedback-wrapper {
   display: -webkit-flex;
   display: flex;
@@ -1331,7 +1341,7 @@ html {
   margin: 0 0 35px 0;
   padding: 0;
 }
-/* line 107, ../scss/_modal.scss */
+/* line 116, ../scss/_modal.scss */
 .feedback__label {
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
@@ -1339,17 +1349,17 @@ html {
   line-height: 18px;
   font-weight: 700;
 }
-/* line 114, ../scss/_modal.scss */
+/* line 123, ../scss/_modal.scss */
 .feedback__label--half {
   -webkit-flex-basis: 360px;
   flex-basis: 360px;
   margin-right: 40px;
 }
-/* line 119, ../scss/_modal.scss */
+/* line 128, ../scss/_modal.scss */
 .feedback__label--half:last-child {
   margin-right: 0;
 }
-/* line 124, ../scss/_modal.scss */
+/* line 133, ../scss/_modal.scss */
 .feedback__input {
   display: block;
   margin: 10px auto;
@@ -1361,15 +1371,35 @@ html {
   border: 2px solid #d7d7d7;
   outline: none;
 }
-/* line 137, ../scss/_modal.scss */
+/* line 146, ../scss/_modal.scss */
 .feedback__input:hover {
   border-color: #bebebe;
 }
-/* line 141, ../scss/_modal.scss */
+/* line 150, ../scss/_modal.scss */
 .feedback__input:focus {
   border-color: #000;
 }
-/* line 146, ../scss/_modal.scss */
+/* line 155, ../scss/_modal.scss */
 .feedback__input:invalid {
   border-color: #fb565a;
+}
+
+@keyframes error-animatinon {
+  0%,100% {
+    transform: translate(0, 0);
+  }
+  10%, 50%, 90% {
+    transform: translate(-10px, 0);
+  }
+  30%, 70% {
+    transform: translate(10px, 0);
+  }
+}
+@keyframes feedback-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

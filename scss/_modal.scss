@@ -10,6 +10,10 @@
 
 	&-show{
 		@include display-flex;
+		-webkit-animation: feedback-animation 0.5s;
+		    animation: feedback-animation 0.5s;
+		-webkit-animation-timing-function:ease-in-out;
+	        animation-timing-function:ease-in-out;
 	}
 	
 	
@@ -78,6 +82,11 @@
 
 	margin: auto;
 	
+}
+
+.modal-error{
+	-webkit-animation: error-animatinon 0.5s;
+	animation: error-animatinon 0.5s;
 }
 
 .feedback{
@@ -150,3 +159,16 @@
 
 	}
 
+@keyframes error-animatinon{
+	0%,100% {transform: translate(0, 0);}
+	
+	10%, 50%, 90%{transform: translate(-10px, 0);}
+	
+	30%, 70%{transform: translate(10px, 0);}
+
+}
+
+@keyframes feedback-animation {
+	0% {transform: scale(0);}
+	100% {transform: scale(1);}
+}
